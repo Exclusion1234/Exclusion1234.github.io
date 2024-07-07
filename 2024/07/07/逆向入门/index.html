@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>逆向入门 | Exclusion's blog</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://pic.imgdb.cn/item/66605e395e6d1bfa05c4bc28.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/friends/"><span class="navItemTitle">Friend</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>逆向入门</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-07-07T04:53:21.000Z" id="date"> 2024-07-07</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-07T07:06:48.973Z" id="updated"> 2024-07-07</time></div></span></div></div><hr><div id="post-content"><h1 id="逆向简单入个门"><a href="#逆向简单入个门" class="headerlink" title="逆向简单入个门"></a>逆向简单入个门</h1><p>简单讲两句逆向工程入门这个东西（有什么讲不好的地方轻点喷）</p>
+<h2 id="什么是逆向工程"><a href="#什么是逆向工程" class="headerlink" title="什么是逆向工程"></a>什么是逆向工程</h2><p>什么是逆向？ 通俗来讲就是，计算机科学中的逆向工程就是将机器才能够懂的机器代码（二进制代码）<strong>翻译成人能够读懂的代码</strong>（汇编代码，C语言代码），并在此基础上分析出程序的<strong>工作流程</strong>。</p>
+<h3 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h3><p>写一个简单的C语言程序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">#include &quot;windows.h&quot;<br>#include &quot;tchar.h&quot;<br><br>int _tmain(int argc, TCHAR* argv[])<br>&#123;<br>	MessageBox(<br>		NULL,<br>		L&quot;Hello World&quot;,<br>		L&quot;just a reverse&quot;,<br>		MB_OK<br>	);<br>	return 0;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>用gcc或者其他编译器或者IDE进行编译</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">gcc helloworld.c -o helloworld.exe<br></code></pre></td></tr></table></figure>
+
+<p>gcc这个编译器实际上是linux那边的开源编译器，然后的话我这边是用vs编译的（偷个懒</p>
+<p>这边把生成的程序根据对应的架构，放入到对应的调试器里面，我这边生成的是32位的，所以丢到ollydbg里面（简称OD）,64位的要丢到x64dbg里面</p>
+<p>前面OD反汇编了不少启动函数，这边先啥也不管，直接来到我们的主函数main()这边</p>
+<p class='item-img' data-src='C:\Users\13526\AppData\Roaming\Typora\typora-user-images\image-20240514154738911.png'><img src="C:\Users\13526\AppData\Roaming\Typora\typora-user-images\image-20240514154738911.png" alt="image-20240514154738911"></p>
+<p>这个就是我们编译出来的代码的汇编语言</p>
+<p>虽然现在有ghira，ida这种高级反汇编工具能生成跟源代码相近的c语言伪代码，但是作为逆向工程的基础，汇编语言还是很重要的，所以还是得去阅读，尝试去分析和理解这种格式的汇编代码</p>
+<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><p>入门需要的科技树：</p>
+<p>​        1.C语言的代码审计能力（这个东西入门时期最重要的）</p>
+<p>​        2.汇编语言：通常是x86-64架构指令</p>
+<p>​        3.调试能力</p>
+<h2 id="CTF-Re快速入门"><a href="#CTF-Re快速入门" class="headerlink" title="CTF-Re快速入门"></a>CTF-Re快速入门</h2><p>问就是<strong>刷题</strong>，狠狠的<strong>刷题</strong>，在各种的刷题平台上狠狠的<strong>刷题</strong></p>
+<p>常见的平台有:<a target="_blank" rel="noopener" href="https://buuoj.cn/">BUUCTF在线评测 (buuoj.cn)</a>,<a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn/home/index">攻防世界 (xctf.org.cn)</a>,nssctf（<a target="_blank" rel="noopener" href="https://www.nssctf.cn/index%EF%BC%89">https://www.nssctf.cn/index）</a></p>
+<p>入门期间，如果可以的话，最好是每天一题的频率，每天在刷题的时候，也最好学习一些相应的知识</p>
+<p>要是碰到实在做不出来的，完全可以是去查找对应的writeup（简称wp）,俗称就是看前人的写题过程，当然最好是找那些详细的，有些人写wp很简略的。</p>
+<p>在刷到一定程度之后，可以适当的去打打一些线上的新生赛这种，在不会太难的程度上，同时学习一些新东西。</p>
+<h2 id="推荐书籍"><a href="#推荐书籍" class="headerlink" title="推荐书籍"></a>推荐书籍</h2><p>这种东西其实入门的时候不怎么需要，当然日后要是深入的话，书籍可太需要了</p>
+<p>我这边就讲讲我个人比较喜欢的书</p>
+<p>1.逆向工程核心原理：这本书是windows环境下的逆向书籍，里面内容挺详细的</p>
+<p>2.C++反汇编与逆向分析技术揭秘：非常好的小黄书，使我的逆向旋转，挺经典的一本，可以看看</p>
+<p>3.C Primer Plus: 学C语言用的，但是找一些比较偏的语法是找不到的</p>
+<p>4.汇编语言 基于x86处理器：挺详细一本汇编语言书，我学汇编就看的这本</p>
+<p>5.深入理解计算机系统：四舍五入这也是本前置条件，是我想买但没买的书（</p>
+<p>6.Linux二进制分析：linux环境的话可以看看这本</p>
+<p>7.程序员的自我修养——链接、装载与库：介绍了 C 源代码如何经过一系列的操作最终变为二进制程序</p>
+<p>8.加密与解密：看雪论坛最新力作（就是有点贵），里面讲的挺多关于逆向混淆方面的东西</p>
+<p>9.IDA权威指南：这位更是IDA作者鼎力推荐，教会你如何快乐地使用IDA</p>
+<h2 id="推荐资源"><a href="#推荐资源" class="headerlink" title="推荐资源"></a>推荐资源</h2><h3 id="教程类"><a href="#教程类" class="headerlink" title="教程类"></a>教程类</h3><p>​    1.<a target="_blank" rel="noopener" href="https://ctf-wiki.org/">简介 - CTF Wiki (ctf-wiki.org)</a> : wiki里面有比较详细的解读</p>
+<p>​    2.<a target="_blank" rel="noopener" href="https://www.bilibili.com/">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a>B站大学： 《重生之我在b站大学学逆向》，B站上有挺多的逆向师傅在上面分享解题过程什么     的，可以看看</p>
+<p>​    3.当然还有各位逆向大佬的博客，这边就不举栗子了（</p>
+<h3 id="比赛类"><a href="#比赛类" class="headerlink" title="比赛类"></a>比赛类</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://ctftime.org/">ctftime</a>：国际的高质量赛事</li>
+<li><a target="_blank" rel="noopener" href="https://www.ctfhub.com/#/calendar">ctfhub</a>：国内外赛事，可以订阅一下日历</li>
+</ol>
+<h2 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h2><p>正所谓巧妇难为无米之炊，逆向没有工具的话，宛如夸父逐日</p>
+<h3 id="反汇编工具"><a href="#反汇编工具" class="headerlink" title="反汇编工具"></a>反汇编工具</h3><h4 id="IDA"><a href="#IDA" class="headerlink" title="IDA"></a>IDA</h4><p>辣个女人必须得占据首位，这是现在已知最好用的反编译器了。正版比较贵就是了（，当然可以考虑去网上找找破解版，IDA配上插件再加上IDApython的脚本，那可真是顶中顶。</p>
+<p>大部分主流的架构都支持，可以用来调试linux的程序。</p>
+<h4 id="Ghidra"><a href="#Ghidra" class="headerlink" title="Ghidra"></a>Ghidra</h4><p>江湖人称红龙，美国那边开发的，功能也挺强大，而且甚至开源，想深入了解反编译原理的可以去看看源代码（我是不敢看的</p>
+<h4 id="OllyDbg"><a href="#OllyDbg" class="headerlink" title="OllyDbg"></a>OllyDbg</h4><p>windows环境32位可执行文件唯一指定调试工具（大概，老传家宝了，在吾爱破解论坛那边找一个被那边大佬各种魔改，各种装插件，非常滴好用</p>
+<h4 id="x64Dbg"><a href="#x64Dbg" class="headerlink" title="x64Dbg"></a>x64Dbg</h4><p>windows环境64位可执行文件唯二指定调试工具，因为OD不支持x64 （：D</p>
+<h4 id="dnspy"><a href="#dnspy" class="headerlink" title="dnspy"></a>dnspy</h4><p>.Net程序唯一指定分析工具，这位更是✌</p>
+<h4 id="gdb"><a href="#gdb" class="headerlink" title="gdb"></a>gdb</h4><p>linux环境下最常用的调试器，这位是pwn✌的最爱，想用也是可以用的</p>
+<h4 id="JEB"><a href="#JEB" class="headerlink" title="JEB"></a>JEB</h4><p>安卓反编译工具，反编译能力极强，还能代码追踪，添加备注什么的，缺点就是这个b代码结构有点烂，还有变量名跟ida有点像</p>
+<h4 id="Jadx-gui"><a href="#Jadx-gui" class="headerlink" title="Jadx-gui"></a>Jadx-gui</h4><p>这位更是安卓反编译滴神，当然就是碰到比较大的apk时，容易崩溃罢了</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="程序性质检查工具"><a href="#程序性质检查工具" class="headerlink" title="程序性质检查工具"></a>程序性质检查工具</h4><p>遇到题目，通常先要知道这是什么架构的，什么位数的，可能加过什么壳。</p>
+<p>DIE，PEiD就是这种Windows平台上的检查工具。</p>
+<p>我通常用的是DIE，能应付大多数要求，但是有些老的保护壳还是有可能查不出来。</p>
+<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><h3 id="程序分析理论"><a href="#程序分析理论" class="headerlink" title="程序分析理论"></a>程序分析理论</h3><p>程序分析通常分为<strong>静态分析</strong>和<strong>动态分析</strong>。</p>
+<h4 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h4><p>使用IDA等工具直接进行一个硬看代码，来观察其大致上的总体逻辑</p>
+<p><strong>优势</strong>：静态分析能够快速探索多个分支（反正是肉眼看，想跳到哪里就跳到哪儿），获得大致的程序流程。</p>
+<p><strong>劣势</strong>：没法获得CPU的实际内容，有可能存在误分析的情况；在被加壳，代码混淆，程序流混淆的情况下，静态分析会变得尤其困难。</p>
+<h4 id="动态分析"><a href="#动态分析" class="headerlink" title="动态分析"></a>动态分析</h4><p>使用ollydbg等调试器，在调试状态下，对一个实际的程序路径进行分析。</p>
+<p><strong>优势：</strong>能获得实际的CPU内容，便于了解真正的程序状态。动态分析可以获得内存中的实际内容，比静态分析中的静态字节码更有真实性：加壳程序，混淆程序的实际程序流程大都可以在调试的过程中摸清。动态调试脱壳也是一种常见手法。</p>
+<p><strong>劣势：</strong>只能局限于一个程序执行流；遇到反调试，异常处理等手段下会比较难动态调试。</p>
+<p>实际分析中，都是动静态同时使用的。</p>
+<h2 id="常见题型"><a href="#常见题型" class="headerlink" title="常见题型"></a>常见题型</h2><h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><p>虚拟机的简单理解，就是机器套机器，一种套娃行为。</p>
+<p>其本质就是实现一个作者自己实现的迫真指令集，然后基于这个指令集实现操作。</p>
+<p>虚拟机这个理念，最有名的实现，就是一个非常美丽（sb)的壳，叫做VMP。</p>
+<h3 id="现代密码学加密"><a href="#现代密码学加密" class="headerlink" title="现代密码学加密"></a>现代密码学加密</h3><p>入门时最容易遇到的加密题就是基于base64及其变体的题目。不过base64实际上不是加密，其实就是一个编码方式。</p>
+<p>正经比赛里的现代密码学加密题，包括但不局限于：TEA家族算法及其魔改，RC4流密码及其魔改，AES及其魔改，DES及其魔改</p>
+<p>偶尔还会出一些少见的密码，比如Chacha20，Salsa20，ECC非对称椭圆加密，甚至用gmp大数运算库实现RSA。非对称加密算法通常都是标准的，不会有什么魔改，也没有什么攻击要求，不像密码方向的题目。</p>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><h4 id="Py脚本"><a href="#Py脚本" class="headerlink" title="Py脚本"></a>Py脚本</h4><p>这个比较简单，入门时可能会遇到。可能会配合代码混淆</p>
+<h4 id="Pyc字节码"><a href="#Pyc字节码" class="headerlink" title="Pyc字节码"></a>Pyc字节码</h4><p>Py脚本编译成Pyc字节码文件。最好了解一下<strong>Python栈虚拟机实现</strong>，以及Python的汇编语言。</p>
+<p>由Pyc字节码得到汇编，可以使用python自带的Pydisasm程序进行反汇编。</p>
+<p>Github上面也有不少反编译工具（比如pycdc），能够直接将Pyc反编译成Py源代码。但是貌似没几个支持3.9及其以上的高版本的，所以学会读Python汇编还是一个很重要的技能。</p>
+<p>还有一件事（老爹音），要了解Pyc字节码文件的结构。</p>
+<h4 id="Pyd编译文件"><a href="#Pyd编译文件" class="headerlink" title="Pyd编译文件"></a>Pyd编译文件</h4><p>这位更是重量级中的重量级。Windows平台下用mingw编译出来的Pyd是最恶心的，没有调试信息。Linux平台下编译出so文件，至少还是有调试信息的。遇到这种题目，建议放到最后去看，因为大概率会看自闭。</p>
+<h4 id="Pyinstaller打包程序"><a href="#Pyinstaller打包程序" class="headerlink" title="Pyinstaller打包程序"></a>Pyinstaller打包程序</h4><p>利用Pyinstaller打包后的exe程序。Github上面有几个解包工具，解包后，会得到一大坨的库文件，以及关键的程序文件。</p>
+<p>通常解包后会得到Pyc文件，但是是缺损头部信息的，需要使用配套的struct文件进行复原。（新版本的直接帮你补了，真好）</p>
+<p>具体不细说，反正就是要去了解Pyc字节码文件结构。</p>
+<h3 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h3><p>Go语言也是一个非常美好（sb）的语言。IDA的反编译器生成的代码不精确，最多作为参考。</p>
+<h3 id="Rust"><a href="#Rust" class="headerlink" title="Rust"></a>Rust</h3><p>这位更是跟上面一样的重量级。问题是近几年这类题出的好多，不得不学了（</p>
+<h3 id="小游戏题"><a href="#小游戏题" class="headerlink" title="小游戏题"></a>小游戏题</h3><p>大致上都是走迷宫什么的</p>
+<p>建议学习DFS，BFS或者A*走迷宫算法</p>
+<h3 id="Net"><a href="#Net" class="headerlink" title=".Net"></a>.Net</h3><p>用dnspy去分析.Net题。核心是C#。</p>
+<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p>安卓apk逆向题。这是一个很大的方向，且一些混淆，加壳方法在apk上都能用。</p>
+<h4 id="Java逆向"><a href="#Java逆向" class="headerlink" title="Java逆向"></a>Java逆向</h4><p>jeb3逆向apk，审计java代码分析主体流程。</p>
+<h4 id="frida"><a href="#frida" class="headerlink" title="frida"></a>frida</h4><p>配环境是真麻烦啊（恼）。</p>
+<p>当然这种题型其实对于研究安卓方面的人是挺重要的，建议狠狠的学习。</p>
+<p>利用这个工具来获取apk中特定的内容。</p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>基于Linux特性的一些题目。ptrace反调试，fork创造子进程等等。对Linux API要有一定的了解。</p>
+<h3 id="代码混淆"><a href="#代码混淆" class="headerlink" title="代码混淆"></a>代码混淆</h3><p>简单的比如有：变量名混淆，函数名混淆。这都是在有调试信息的情况下搞的。</p>
+<p>Re中比较常见的是真正的对程序执行流进行调整，变形而实现的混淆。</p>
+<p>基础的有花指令，SMC这类，前者是塞进去一点垃圾代码，来让程序不是很好地进行反编译，后者则是直接把整个函数给他加密了</p>
+<p>稍微进阶一点的比如ollvm，虚假控制流等。这些混淆在GitHub上面都有复原工具。</p>
+<div id="paginator"></div></div><div id="post-footer"></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://pic.imgdb.cn/item/666172fe5e6d1bfa05b445ca.png" alt="Logo"></a><h1 id="Dr"><a href="/">Exclusion</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%86%E5%90%91%E7%AE%80%E5%8D%95%E5%85%A5%E4%B8%AA%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text">逆向简单入个门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.1.</span> <span class="toc-text">什么是逆向工程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BE%E4%B8%AA%E6%A0%97%E5%AD%90"><span class="toc-number">1.1.1.</span> <span class="toc-text">举个栗子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">前置条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CTF-Re%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">1.3.</span> <span class="toc-text">CTF-Re快速入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D"><span class="toc-number">1.4.</span> <span class="toc-text">推荐书籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E8%B5%84%E6%BA%90"><span class="toc-number">1.5.</span> <span class="toc-text">推荐资源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%99%E7%A8%8B%E7%B1%BB"><span class="toc-number">1.5.1.</span> <span class="toc-text">教程类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%B5%9B%E7%B1%BB"><span class="toc-number">1.5.2.</span> <span class="toc-text">比赛类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">1.6.</span> <span class="toc-text">常用工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E6%B1%87%E7%BC%96%E5%B7%A5%E5%85%B7"><span class="toc-number">1.6.1.</span> <span class="toc-text">反汇编工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IDA"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">IDA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ghidra"><span class="toc-number">1.6.1.2.</span> <span class="toc-text">Ghidra</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OllyDbg"><span class="toc-number">1.6.1.3.</span> <span class="toc-text">OllyDbg</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x64Dbg"><span class="toc-number">1.6.1.4.</span> <span class="toc-text">x64Dbg</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dnspy"><span class="toc-number">1.6.1.5.</span> <span class="toc-text">dnspy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gdb"><span class="toc-number">1.6.1.6.</span> <span class="toc-text">gdb</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JEB"><span class="toc-number">1.6.1.7.</span> <span class="toc-text">JEB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jadx-gui"><span class="toc-number">1.6.1.8.</span> <span class="toc-text">Jadx-gui</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">1.6.2.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%B4%A8%E6%A3%80%E6%9F%A5%E5%B7%A5%E5%85%B7"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">程序性质检查工具</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%AE%BA"><span class="toc-number">1.7.</span> <span class="toc-text">理论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90%E7%90%86%E8%AE%BA"><span class="toc-number">1.7.1.</span> <span class="toc-text">程序分析理论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">静态分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">动态分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B"><span class="toc-number">1.8.</span> <span class="toc-text">常见题型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">1.8.1.</span> <span class="toc-text">虚拟机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8A%A0%E5%AF%86"><span class="toc-number">1.8.2.</span> <span class="toc-text">现代密码学加密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-number">1.8.3.</span> <span class="toc-text">Python</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Py%E8%84%9A%E6%9C%AC"><span class="toc-number">1.8.3.1.</span> <span class="toc-text">Py脚本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pyc%E5%AD%97%E8%8A%82%E7%A0%81"><span class="toc-number">1.8.3.2.</span> <span class="toc-text">Pyc字节码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pyd%E7%BC%96%E8%AF%91%E6%96%87%E4%BB%B6"><span class="toc-number">1.8.3.3.</span> <span class="toc-text">Pyd编译文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pyinstaller%E6%89%93%E5%8C%85%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.8.3.4.</span> <span class="toc-text">Pyinstaller打包程序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Go"><span class="toc-number">1.8.4.</span> <span class="toc-text">Go</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rust"><span class="toc-number">1.8.5.</span> <span class="toc-text">Rust</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E6%B8%B8%E6%88%8F%E9%A2%98"><span class="toc-number">1.8.6.</span> <span class="toc-text">小游戏题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Net"><span class="toc-number">1.8.7.</span> <span class="toc-text">.Net</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android"><span class="toc-number">1.8.8.</span> <span class="toc-text">Android</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E9%80%86%E5%90%91"><span class="toc-number">1.8.8.1.</span> <span class="toc-text">Java逆向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#frida"><span class="toc-number">1.8.8.2.</span> <span class="toc-text">frida</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux"><span class="toc-number">1.8.9.</span> <span class="toc-text">Linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%B7%B7%E6%B7%86"><span class="toc-number">1.8.10.</span> <span class="toc-text">代码混淆</span></a></li></ol></li></ol></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
