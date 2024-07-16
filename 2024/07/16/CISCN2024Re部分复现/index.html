@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CISCN2024部分复现 | Exclusion's blog</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('https://pic.imgdb.cn/item/66605e395e6d1bfa05c4bc28.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: 'confirm'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.2.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/friends/"><span class="navItemTitle">Friend</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>CISCN2024部分复现</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2024-07-16T06:50:21.000Z" id="date"> 2024-07-16</time></div></span><br><span>Last Update: <div class="control"><time datetime="2024-07-16T11:58:45.473Z" id="updated"> 2024-07-16</time></div></span></div></div><hr><div id="post-content"><h1 id="CISCN2024部分Re题复现"><a href="#CISCN2024部分Re题复现" class="headerlink" title="CISCN2024部分Re题复现"></a>CISCN2024部分Re题复现</h1><p>非常好国赛，使我的逆向旋转，frida,go,rust和cython什么玩意儿都来了，头都要大了</p>
+<h2 id="asm-re"><a href="#asm-re" class="headerlink" title="asm_re"></a>asm_re</h2><p>上来一个汇编语言，看着就像是从IDA里面直接拖过来的东西</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/6696191ed9c307b7e9a660ce.png'><img src="https://pic.imgdb.cn/item/6696191ed9c307b7e9a660ce.png" alt="image-20240716145546384"></p>
+<p>首先是看着像初始化的东西，可以不用管</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/669619b1d9c307b7e9a71afc.png'><img src="https://pic.imgdb.cn/item/669619b1d9c307b7e9a71afc.png" alt="image-20240716145646570"></p>
+<p>这里可以看出是加密方法，学点汇编就大概知道是个什么意思了</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/669619e7d9c307b7e9a761f5.png'><img src="https://pic.imgdb.cn/item/669619e7d9c307b7e9a761f5.png" alt="image-20240716145740884"></p>
+<p>这边是密文，简单写个脚本解密即可（虽然比赛过程中处处犯傻</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">enc = [0x1fd7, 0x21b7, 0x1e47, 0x2027, 0x26e7, 0x10d7, 0x1127, 0x2007, 0x11c7, 0x1e47, 0x1017, 0x1017, 0x11f7, 0x2007,<br>       0x1037, 0x1107, 0x1f17, 0x10d7, 0x1017, 0x1017, 0x1f67, 0x1017, 0x11c7, 0x11c7, 0x1017, 0x1fd7, 0x1f17, 0x1107,<br>       0xf47, 0x1127, 0x1037, 0x1e47, 0x1037, 0x1fd7, 0x1107, 0x1fd7, 0x1107, 0x2787] //密文注意小端序问题<br>flag = &#x27;&#x27;<br>for i in enc:<br>    i = (((i -0x1e) ^ 0x4d) - 0x14) // 0x50<br>    flag += chr(i)<br>print(flag)<br></code></pre></td></tr></table></figure>
+
+<h2 id="android-re"><a href="#android-re" class="headerlink" title="android_re"></a>android_re</h2><p>我勒个frida啊，配环境是一辈子的，frida是不会用的，现在只能开始恶补了（</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66961db7d9c307b7e9adcd73.png'><img src="https://pic.imgdb.cn/item/66961db7d9c307b7e9adcd73.png" alt="image-20240716151421506"></p>
+<p>这个是主函数，可以看到引用了inspect</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66961e62d9c307b7e9aea42e.png'><img src="https://pic.imgdb.cn/item/66961e62d9c307b7e9aea42e.png" alt="image-20240716151552227"></p>
+<p>来到inspect,可以看到是DES加密，需要Key和iv,</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66961ee8d9c307b7e9af4f79.png'><img src="https://pic.imgdb.cn/item/66961ee8d9c307b7e9af4f79.png" alt="image-20240716151859985"></p>
+<p>可以看到是有个lib被调用了，去找找看</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66961ffbd9c307b7e9b0b853.png'><img src="https://pic.imgdb.cn/item/66961ffbd9c307b7e9b0b853.png" alt="image-20240716152249801"></p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66962017d9c307b7e9b0dc66.png'><img src="https://pic.imgdb.cn/item/66962017d9c307b7e9b0dc66.png" alt="image-20240716152306570"></p>
+<p>上面是getiv,下面是getkey，可以看得出来这个静态分析的难度那是相当滴大（是这样的，我看了一小时看不出来半点，所以应该采用动调的方式，因为这个是so文件，只是个库，无法主动执行，所以需要用到动调（噩梦来了）</p>
+<p>我这边利用的是unidbg，这边可供选择也挺多的，还有可爱（sb）的frida以及objection</p>
+<p>他们都有一个共同的特点，环境难配</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">package com.ciscn;<br> <br>import com.github.unidbg.linux.android.AndroidEmulatorBuilder;<br>import com.github.unidbg.linux.android.AndroidResolver;<br>// 导入通用且标准的类库<br>import com.github.unidbg.linux.android.dvm.AbstractJni;<br>import com.github.unidbg.AndroidEmulator;<br>import com.github.unidbg.Module;<br>import com.github.unidbg.linux.android.dvm.*;<br>import com.github.unidbg.memory.Memory;<br>import com.github.unidbg.linux.android.dvm.DalvikModule;<br>import com.github.unidbg.linux.android.dvm.DvmClass;<br>import com.github.unidbg.linux.android.dvm.VM;<br> <br> <br>import java.io.*;<br> <br>public class ciscna extends AbstractJni &#123;<br>    private final AndroidEmulator emulator; //android 模拟器 a<br>    private final VM vm;//vm 虚拟机<br>    private final Module module;<br>    private final Memory memory;<br>    private final DalvikModule dm;<br> <br>    //将该类封装起来，以后直接套用模板<br>    public ciscna(String apkFilePath, String soFilePath, String apkProcessname) throws IOException &#123;<br>        // 创建模拟器实例,进程名建议依照实际进程名填写，可以规避针对进程名的校验<br>        emulator = AndroidEmulatorBuilder.for64Bit().setProcessName(apkProcessname).build();<br>        memory = emulator.getMemory();<br>        memory.setLibraryResolver(new AndroidResolver(23));<br>        vm = emulator.createDalvikVM(new File(apkFilePath));<br>        vm.setVerbose(false); // 打印日志，会在调用初始化 JNI_unload 打印一些信息，默认：false<br>        // 加载目标 SO<br>        dm = vm.loadLibrary(new File(soFilePath), true); // 加载 so 到虚拟内存，第二个参数：是否需要初始化<br>        //获取本 SO 模块的句柄<br>        module = dm.getModule();<br>        vm.setJni(this); //设置 Jni，防止报错<br>        //创建完后，需要调用 JNI_onload 函数<br>        dm.callJNI_OnLoad(emulator); // 调用 JNI OnLoad，进行动态注册某些函数。如果都是静态注册，那就不用调用这个函数<br>        vm.setVerbose(true);<br>        // Debugger debugger = emulator.attach();<br>        // debugger.addBreakPoint(module.base + 0x1924C);<br>        // debugger.addBreakPoint(module.base + 0x19240);<br>    &#125;<br> <br>    public ciscna(AndroidEmulator emulator, VM vm, Module module, Memory memory, DalvikModule dm) &#123;<br>        this.emulator = emulator;<br>        this.vm = vm;<br>        this.module = module;<br>        this.memory = memory;<br>        this.dm = dm;<br>    &#125;<br> <br>    public String func_getKey() &#123;<br>        DvmClass dvmClass = vm.resolveClass(&quot;com.example.re11113.jni&quot;);<br>        DvmObject&lt;?&gt; object = dvmClass.newObject(null);<br>        DvmObject&lt;?&gt; object1 = object.callJniMethodObject(emulator, &quot;getkey()Ljava/lang/String;&quot;);<br>        return object1.getValue().toString();<br>    &#125;<br> <br>    public String func_getiv() &#123;<br>        DvmClass dvmClass = vm.resolveClass(&quot;com.example.re11113.jni&quot;);<br>        DvmObject&lt;?&gt; object = dvmClass.newObject(null);<br>        DvmObject&lt;?&gt; object1 = object.callJniMethodObject(emulator, &quot;getiv()Ljava/lang/String;&quot;);<br>        return object1.getValue().toString();<br>    &#125;<br> <br>    //创建一个 main 函数<br>    public static void main(String[] args) throws IOException &#123;<br>        // 1、需要调用的 so 文件所在路径<br>        String soFilePath = &quot;/root/Documents/unidbg/unidbg-android/src/test/java/com/ciscn/libSecret_entrance.so&quot;;<br> <br>        // 2、APK 的路径<br>        String apkFilePath = &quot;/root/Documents/unidbg/unidbg-android/src/test/java/com/ciscn/app-debug.apk&quot;;<br>        // 3、apk 进程名<br>        String apkProcessname = &quot;com.tencent.testvuln&quot;;<br>        ciscna myapp = new ciscna(apkFilePath, soFilePath, apkProcessname);<br>        System.out.println(&quot;getKey result:&quot; + myapp.func_getKey());<br>        System.out.println(&quot;getiv result:&quot; + myapp.func_getiv());<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>看得很复杂对吧，实际上就一个模板，改改参数就行了（对我这个安卓动调苦手太好了</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/669622dad9c307b7e9b47169.png'><img src="https://pic.imgdb.cn/item/669622dad9c307b7e9b47169.png" alt="image-20240716153508243"></p>
+<p>跑出来结果</p>
+<p>可以看到key和iv的值都被我们成功的hook出来了</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66962442d9c307b7e9b63799.png'><img src="https://pic.imgdb.cn/item/66962442d9c307b7e9b63799.png" alt="image-20240716154149730"></p>
+<p>用flag{}包起来即可</p>
+<p>当时表示用frida狠狠的报错（心态是逐渐崩溃</p>
+<h2 id="GoReverse"><a href="#GoReverse" class="headerlink" title="GoReverse"></a>GoReverse</h2><p>嘻嘻，加密东西写满了我整个小白板了，你个b东西</p>
+<p>首先打开main_main函数</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66962ce7d9c307b7e9c30c83.png'><img src="https://pic.imgdb.cn/item/66962ce7d9c307b7e9c30c83.png" alt="image-20240716161911982"></p>
+<p>上面部分经过分析是反调试的东西，我谢谢你</p>
+<p>接下来来到<code>main__ptr_co6Pxq_Execute</code>函数</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66962dc4d9c307b7e9c443d4.png'><img src="https://pic.imgdb.cn/item/66962dc4d9c307b7e9c443d4.png" alt="image-20240716162109047"></p>
+<p>查看汇编发现就是一臭打招呼的，可以继续往下走了</p>
+<p>然后来到重量级的<code>main__ptr_B2bUPq_Execute</code></p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66962ed0d9c307b7e9c5bcf4.png'><img src="https://pic.imgdb.cn/item/66962ed0d9c307b7e9c5bcf4.png" alt="image-20240716162620880"></p>
+<p>首先这部分代码是判断是否读取到了flag文件</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66962ef1d9c307b7e9c5eb1c.png'><img src="https://pic.imgdb.cn/item/66962ef1d9c307b7e9c5eb1c.png" alt="image-20240716162723576"></p>
+<p>中间这部分是加密（suprise</p>
+<p>下面就是判断了</p>
+<p>可以看得出来重要的都是一个个main为前缀的函数，一个个来吧</p>
+<h3 id="main-ylFyZv"><a href="#main-ylFyZv" class="headerlink" title="main_ylFyZv"></a>main_ylFyZv</h3><p class='item-img' data-src='https://pic.imgdb.cn/item/66962ffed9c307b7e9c766ce.png'><img src="https://pic.imgdb.cn/item/66962ffed9c307b7e9c766ce.png" alt="image-20240716163143411"></p>
+<p>首先是一大堆的代码，不过前面几行不要管，重要的是下面的for循环，可以看到是最友好的异或</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66963062d9c307b7e9c7f76c.png'><img src="https://pic.imgdb.cn/item/66963062d9c307b7e9c7f76c.png" alt="image-20240716163333574"></p>
+<p>这个就是我们拿来异或的密钥了</p>
+<h3 id="main-bytesToUint32s"><a href="#main-bytesToUint32s" class="headerlink" title="main_bytesToUint32s"></a>main_bytesToUint32s</h3><p>这个是修改类型的，可以不用管</p>
+<h3 id="main-zQyveE"><a href="#main-zQyveE" class="headerlink" title="main_zQyveE"></a>main_zQyveE</h3><p class='item-img' data-src='https://pic.imgdb.cn/item/66963162d9c307b7e9c93cf8.png'><img src="https://pic.imgdb.cn/item/66963162d9c307b7e9c93cf8.png" alt="image-20240716163749340"></p>
+<p>可以看出很明显的xxtea算法，delta值是改过的，<code>main_KjmS3y</code>函数就是MX,但是顺序变了</p>
+<h3 id="main-Q05qm6"><a href="#main-Q05qm6" class="headerlink" title="main_Q05qm6"></a>main_Q05qm6</h3><p class='item-img' data-src='https://pic.imgdb.cn/item/66963210d9c307b7e9ca0bdc.png'><img src="https://pic.imgdb.cn/item/66963210d9c307b7e9ca0bdc.png" alt="image-20240716164045018"></p>
+<p>看到那个littleEndian了吗，这个就是这个函数的作用了</p>
+<h3 id="main-AkuFrt"><a href="#main-AkuFrt" class="headerlink" title="main_AkuFrt"></a>main_AkuFrt</h3><p class='item-img' data-src='C:\Users\13526\AppData\Roaming\Typora\typora-user-images\image-20240716164601775.png'><img src="C:\Users\13526\AppData\Roaming\Typora\typora-user-images\image-20240716164601775.png" alt="image-20240716164601775"></p>
+<p>最逆天的来了</p>
+<p>可以看到这里用了随机数和sm4</p>
+<p>看看汇编</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/6696373dd9c307b7e9d1b855.png'><img src="https://pic.imgdb.cn/item/6696373dd9c307b7e9d1b855.png" alt="image-20240716170242942"></p>
+<p>可以看到了用了CTR的方法，key值我们是有了，但是iv我们却没有</p>
+<p>那么我们的iv哪来呢，用了非常好的随机数，所以说我们需要动调（乐</p>
+<p>首先这个程序有两处反调试，第一个我们在main_main函数的时候已经说过了</p>
+<p>另一段在0x0438E28，也就是在调用main_main函数的runtime_main函数中，动调的时候发现执行这个call之后程序就退出了，nop掉之后程序正常运行。</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66963961d9c307b7e9d42fc9.png'><img src="https://pic.imgdb.cn/item/66963961d9c307b7e9d42fc9.png" alt="image-20240523162357931"></p>
+<p>随后就可以进行动调了</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66963ea8d9c307b7e9db17a1.png'><img src="https://pic.imgdb.cn/item/66963ea8d9c307b7e9db17a1.png" alt="image-20240523163618505"></p>
+<h3 id="main-JrkmHd"><a href="#main-JrkmHd" class="headerlink" title="main_JrkmHd"></a>main_JrkmHd</h3><p class='item-img' data-src='https://pic.imgdb.cn/item/669641e7d9c307b7e9df0788.png'><img src="https://pic.imgdb.cn/item/669641e7d9c307b7e9df0788.png" alt="image-20240716174817735"></p>
+<p>这个函数则是AES加密，然后经典key值一查就有，iv一查一个不知道</p>
+<p>要注意的是有个<code>makeslice</code>函数，这个是go语言里面的切片函数，实际作用就是把你key里面的前16位拿过来然后变成了iv（乐</p>
+<h3 id="main-NJVCTq"><a href="#main-NJVCTq" class="headerlink" title="main_NJVCTq"></a>main_NJVCTq</h3><p class='item-img' data-src='https://pic.imgdb.cn/item/669644aad9c307b7e9e378d1.png'><img src="https://pic.imgdb.cn/item/669644aad9c307b7e9e378d1.png" alt="image-20240716175933383"></p>
+<p>最后一个base32就好了。</p>
+<p>总体来说就是非常的套娃，头大，那么问题来了，密文呢</p>
+<p>看看我们的最初的函数，可以看到我们需要有个flag文件，这里是复现，所以我们自己弄一个，然后远程连接一下</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/66964f51d9c307b7e9f04ec2.png'><img src="https://pic.imgdb.cn/item/66964f51d9c307b7e9f04ec2.png" alt="image-20240716184526875"></p>
+<p>这不就来了吗，解密过程就不给了，也是个麻烦仙人（</p>
+<h2 id="whereThel1b"><a href="#whereThel1b" class="headerlink" title="whereThel1b"></a>whereThel1b</h2><p>人生第二次碰到的cython，给了个py文件和so库，看看py</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">import whereThel1b<br><br><br>flag = input(&quot;where is my flag:&quot;)<br>flag = flag.encode()<br>encry = [108, 117, 72, 80, 64, 49, 99, 19, 69, 115, 94, 93, 94, 115, 71, 95, 84, 89, 56, 101, 70, 2, 84, 75, 127, 68, 103, 85, 105, 113, 80, 103, 95, 67, 81, 7, 113, 70, 47, 73, 92, 124, 93, 120, 104, 108, 106, 17, 80, 102, 101, 75, 93, 68, 121, 26]<br>whereThel1b.whereistheflag(flag)<br>ret = whereThel1b.trytry(flag)<br><br>if ret == encry:<br>    print(&quot;rrrrrrrrrrrright&quot;)<br>else:<br>    print(&quot;wwwwwwwwwwwwwwwrong&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>可以发现是调用了这个库，于是得对这个文件进行一个快乐的审计</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/669659c6d9c307b7e9ffe61a.png'><img src="https://pic.imgdb.cn/item/669659c6d9c307b7e9ffe61a.png" alt="image-20240716192642357"></p>
+<p>首先是<code>whereistheflag</code>，可以发现有base64加密，然后再往下看</p>
+<p class='item-img' data-src='https://pic.imgdb.cn/item/669659eed9c307b7e9001a99.png'><img src="https://pic.imgdb.cn/item/669659eed9c307b7e9001a99.png" alt="image-20240716193050224"></p>
+<p>发现有个random库，还有randint方法，按理说应该都会有个seed的，往下翻就没有什么其他有用的东西了，去<code>trytry</code>函数</p>
+<p class='item-img' data-src='C:\Users\13526\AppData\Roaming\Typora\typora-user-images\image-20240716193320519.png'><img src="C:\Users\13526\AppData\Roaming\Typora\typora-user-images\image-20240716193320519.png" alt="image-20240716193320519"></p>
+<p>可以看到有<code>random.seed</code>这个方法，那么问题来了，中间的值呢,比赛期间找到似都找不到</p>
+<p>其实挺简单的，首先可以确定的是cython中的常量（即数字）会是<code>__pyx_int_x</code>，其中x是数字，所以seed是</p>
+<p class='item-img' data-src='C:\Users\13526\AppData\Roaming\Typora\typora-user-images\image-20240716194930746.png'><img src="C:\Users\13526\AppData\Roaming\Typora\typora-user-images\image-20240716194930746.png" alt="image-20240716194930746"></p>
+<p>另外的话如果是利用变量这种东西，会以<code>__pyx_n_s_a</code>这种形式出现，其中a就是我们的变量，字符串这种则是<code>__pyx_kp_s_Hello_cython</code>这种形式，Hello_cython就是我们的字符串，所以我们就可以按照这样的格式来确定。</p>
+<p>exp:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">import random<br>import base64<br><br>encry = [108, 117, 72, 80, 64, 49, 99, 19, 69, 115, 94, 93, 94, 115, 71, 95, 84, 89, 56, 101, 70, 2, 84, 75, 127, 68, 103, 85, 105, 113, 80, 103, 95, 67, 81, 7, 113, 70, 47, 73, 92, 124, 93, 120, 104, 108, 106, 17, 80, 102, 101, 75, 93, 68, 121, 26]<br><br>random.seed(0)<br>for i in range(len(encry)):<br>    encry[i] = encry[i] ^ random.randint(0, len(encry))<br><br>flag = base64.b64decode(bytes(encry))<br>print(flag)<br><br></code></pre></td></tr></table></figure>
+
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/07/07/%E9%80%86%E5%90%91%E5%85%A5%E9%97%A8/">逆向入门 Prev →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://pic.imgdb.cn/item/666172fe5e6d1bfa05b445ca.png" alt="Logo"></a><h1 id="Dr"><a href="/">Exclusion</a></h1><div id="description"><p></p></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CISCN2024%E9%83%A8%E5%88%86Re%E9%A2%98%E5%A4%8D%E7%8E%B0"><span class="toc-number">1.</span> <span class="toc-text">CISCN2024部分Re题复现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#asm-re"><span class="toc-number">1.1.</span> <span class="toc-text">asm_re</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#android-re"><span class="toc-number">1.2.</span> <span class="toc-text">android_re</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GoReverse"><span class="toc-number">1.3.</span> <span class="toc-text">GoReverse</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main-ylFyZv"><span class="toc-number">1.3.1.</span> <span class="toc-text">main_ylFyZv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-bytesToUint32s"><span class="toc-number">1.3.2.</span> <span class="toc-text">main_bytesToUint32s</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-zQyveE"><span class="toc-number">1.3.3.</span> <span class="toc-text">main_zQyveE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-Q05qm6"><span class="toc-number">1.3.4.</span> <span class="toc-text">main_Q05qm6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-AkuFrt"><span class="toc-number">1.3.5.</span> <span class="toc-text">main_AkuFrt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-JrkmHd"><span class="toc-number">1.3.6.</span> <span class="toc-text">main_JrkmHd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-NJVCTq"><span class="toc-number">1.3.7.</span> <span class="toc-text">main_NJVCTq</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#whereThel1b"><span class="toc-number">1.4.</span> <span class="toc-text">whereThel1b</span></a></li></ol></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
